@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f6f1;
+  color: #3a2c19;
+}
+
+.container {
+  max-width:950px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #693c17;
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+@media (min-width: 1551px) {
+  .faculty-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1200px) and (max-width: 1550px) {
+  .faculty-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .faculty-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .faculty-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faculty-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;        
+  box-sizing: border-box;
+}
+
+
+.faculty-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #fceee0;
+}
+
+.faculty-name {
+  background-color: #8a4c0f;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.faculty-info {
+  text-align: left;
+  font-size: 0.95em;
+  height: 150px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.faculty-info p {
+  margin: 8px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #a86024;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #0e4d88;
+}

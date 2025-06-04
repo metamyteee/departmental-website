@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Postdocs & Visitors</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f6f1;
+      color: #3a2c19;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #693c17;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 16px;
+      object-fit: cover;
+      margin-bottom: 12px;
+      border: 4px solid #fceee0;
+    }
+
+    .name {
+      background-color: #8a4c0f;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 0.95em;
+      font-weight: bold;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar-container').innerHTML = data);
+  </script>
+
+  <div class="container">
+    <h1>Postdoctoral Fellows</h1>
+    <div class="grid">
+      <div class="card">
+        <img src="postdocs/aarav.jpg" alt="Aarav" />
+        <div class="name">Dr. Aarav Patel</div>
+      </div>
+      <div class="card">
+        <img src="postdocs/niya.jpg" alt="Niya" />
+        <div class="name">Dr. Niya Bansal</div>
+      </div>
+      <div class="card">
+        <img src="postdocs/aarav.jpg" alt="Aarav" />
+        <div class="name">Dr. Aarav Patel</div>
+      </div>
+      <div class="card">
+        <img src="postdocs/niya.jpg" alt="Niya" />
+        <div class="name">Dr. Niya Bansal</div>
+      </div>
+      <div class="card">
+        <img src="postdocs/aarav.jpg" alt="Aarav" />
+        <div class="name">Dr. Aarav Patel</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Visiting Scholars</h1>
+    <div class="grid">
+        <div class="card">
+            <img src="postdocs/aarav.jpg" alt="Aarav" />
+            <div class="name">Dr. Aarav Patel</div>
+          </div>
+          <div class="card">
+            <img src="postdocs/niya.jpg" alt="Niya" />
+            <div class="name">Dr. Niya Bansal</div>
+          </div>
+          <div class="card">
+            <img src="postdocs/aarav.jpg" alt="Aarav" />
+            <div class="name">Dr. Aarav Patel</div>
+          </div>
+          <div class="card">
+            <img src="postdocs/niya.jpg" alt="Niya" />
+            <div class="name">Dr. Niya Bansal</div>
+          </div>
+          <div class="card">
+            <img src="postdocs/aarav.jpg" alt="Aarav" />
+            <div class="name">Dr. Aarav Patel</div>
+          </div>
+    </div>
+  </div>
+  <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+  <script src="script.js"></script>
+</body>
+</html>

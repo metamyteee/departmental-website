@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theoretical High Energy Physics</title>
+    <link rel="stylesheet" href="facultystyle.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fffaf5;
+            color: #5a3208;
+        }
+
+        .header {
+            height: 300px;
+            background-color: #f3e8dc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #8a4c0f;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .slider-placeholder {
+            height: 280px;
+            background-color: #e0d2c0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8a4c0f;
+            font-size: 1.2em;
+        }
+
+        .content {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.7;
+            font-size: 1.05em;
+        }
+
+        h1,
+        h2 {
+            color: #8a4c0f;
+            text-align: center;
+            /* Center the text */
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar-container').innerHTML = data);
+  </script>
+
+    <div class="slider-placeholder">
+        [ Image Slider Placeholder – Add Images Here ]
+    </div>
+
+    <div class="content">
+        <h1>Experimental High Energy Physics</h1>
+
+        <p>
+            ----
+        </p>
+    </div>
+    <div id="selected-container" class="faculty-grid"></div>
+
+  <script>
+    const desiredIds = ['prof-raghunath-sahoo','prof-ankhi-roy'];
+
+    fetch('faculty.html')
+      .then(response => response.text())
+      .then(html => {
+        const temp = document.createElement('div');
+        temp.innerHTML = html;
+
+        desiredIds.forEach(id => {
+          const card = temp.querySelector(`#${id}`);
+          if (card) {
+            document.getElementById('selected-container').appendChild(card.cloneNode(true));
+          }
+        });
+      })
+      .catch(error => console.error('Error loading faculty cards:', error));
+  </script>
+  <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+  <script src="script.js"></script>
+</body>
+
+</html>

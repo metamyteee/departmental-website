@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Physics - IIT Indore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fffaf5;
+            color: #333;
+        }
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background: #fffaf5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #004080;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li::before {
+            content: "\2022";
+            color: #004080;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar-container').innerHTML = data);
+  </script>
+    <div class="container">
+        <h1>Department of Physics - IIT Indore</h1>
+        <p>The Department of Physics at IIT Indore is dedicated to excellence in education, research, and innovation in the physical sciences. With a strong emphasis on interdisciplinary approaches, the department aims to foster a deep understanding of fundamental physics while addressing modern technological challenges.</p>
+
+        <h2>Academic Programs</h2>
+        <p>The department offers a range of academic programs designed to cater to diverse interests and career goals, including:</p>
+        <ul>
+            <li><strong>4-Year B.S. in Physics:</strong> Providing a solid foundation in physics, equipping students for advanced studies or careers in science and technology.</li>
+            <li><strong>B.Tech. in Engineering Physics:</strong> Launched in 2024, this program focuses on applying physics principles to engineering problems, with specialization opportunities in cutting-edge areas.</li>
+            <li><strong>Ph.D. Program:</strong> Designed for aspiring researchers to pursue innovative studies in theoretical, experimental, and computational physics.</li>
+        </ul>
+
+        <h2>Research and Facilities</h2>
+        <p>The department is a hub for high-impact research in areas such as condensed matter physics, quantum mechanics, astrophysics, and photonics. Equipped with state-of-the-art facilities, including advanced spectrometers, X-ray diffraction systems, and computational labs, the department supports a thriving research environment.</p>
+
+        <h2>Colloquia and Outreach</h2>
+        <p>Regular colloquia and workshops bring together leading experts and the academic community to discuss the latest advancements in physics. The department also actively engages in outreach activities, inspiring young minds to explore the wonders of science.</p>
+        <div class="highlight"><strong>Coordinator:</strong> Dr. Mritunjay oversees the regular colloquia, ensuring engaging discussions on cutting-edge topics.</div>
+
+        <h2>Functioning and Administrative Support</h2>
+        <p>The Department of Physics ensures smooth operations through the collaborative efforts of its dedicated staff and faculty coordinators:</p>
+
+        <h3>Webpage Maintenance</h3>
+        <div><strong>Maintained by:</strong> Dr. Mawrie ensures up-to-date and accurate information for students, faculty, and visitors.</div>
+
+        <h3>Office Staff</h3>
+        <ul>
+            <li><strong>Mr. Rahul (Senior Assistant)</strong> and <strong>Mr. Ved Prakash (Clerk)</strong> handle administrative paperwork efficiently.</li>
+        </ul>
+
+        <h3>Technical Support</h3>
+        <ul>
+            <li><strong>Mr. Prashant</strong> and <strong>Mr. Nitin</strong> provide essential technical assistance in the laboratories, ensuring seamless research and teaching activities.</li>
+        </ul>
+
+        <h3>Academic Coordination</h3>
+        <ul>
+            <li><strong>Department Undergraduate Convener:</strong> Dr. Mawrie oversees the smooth functioning of undergraduate courses, ensuring students receive a comprehensive learning experience.</li>
+            <li><strong>Department Postgraduate Convener:</strong> Dr. Dipankar Das manages postgraduate programs, facilitating academic rigor and research opportunities.</li>
+        </ul>
+    </div>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Message - Department of Physics, IIT Indore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffaf5;
+            margin: 40px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background: #fffaf5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header img {
+            width: 7em;
+            border-radius: 8px;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .signature {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-container').innerHTML = data);
+    </script>
+
+    <div class="container">
+        <div class="header">
+            <p style="color: #004080; font-size:1.8em; padding:6px; line-height:1; text-align:left; word-spacing:8px;">
+                <b>Welcome to the Department of Physics at IIT Indore!</b>
+            </p>
+            <img src="prof-images/prof-preeti-bhobe.jpg" alt="Professor Preeti Bhobe">
+        </div>
+
+        <p>Our department is driven by a passion for advancing knowledge through innovative teaching and groundbreaking
+            research. We aim to nurture the next generation of physicists equipped to lead advancements in both academia
+            and industry, aligning our vision with India’s educational and scientific aspirations.</p>
+
+        <p>We offer a diverse range of academic programs, including M.Sc. and Ph.D. programs, along with the newly
+            introduced 4-year B.Tech. Engineering Physics program (launched in 2024-25). These programs combine a solid
+            foundation in fundamental physics with the practical skills needed to address real-world challenges,
+            preparing students for dynamic careers in science and technology.</p>
+
+        <p>Our faculty members are engaged in pioneering research across a variety of fields, including condensed matter
+            physics, high-energy physics, and applications of artificial intelligence in physics. With state-of-the-art
+            facilities and more than ten specialized research laboratories, the department fosters a thriving
+            environment for inquiry and innovation. Our strong collaborations with global institutions such as CERN,
+            ISRO, DAE, and DRDO provide our students and researchers with unparalleled exposure to cutting-edge projects
+            and expertise.</p>
+
+        <p>We also host regular colloquia and seminars featuring distinguished scientists and experts. These events
+            enrich our academic community, offering opportunities to explore contemporary research topics and engage
+            with emerging trends in physics.</p>
+
+        <p>Thank you for your interest in our department. Together, let us continue to push the frontiers of knowledge
+            and innovation in physics.</p>
+
+        <p class="signature">
+            With best regards,<br>
+            <strong>Professor Preeti Bhobe</strong><br>
+            Head of the Department<br>
+            Department of Physics, IIT Indore
+        </p>
+    </div>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

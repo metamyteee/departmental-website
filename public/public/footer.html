@@ -1,0 +1,396 @@
+<style>
+    
+
+    /* Footer base styling */
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    footer {
+        margin-top: 50px;
+        display: flex;
+        background: linear-gradient(to bottom, #fffaf5 0%, rgb(0, 4, 86) 10%, rgb(11, 12, 34) 100%);
+        color: #f1f1f1;
+        padding: 40px 2vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        justify-content: space-around;
+        text-align: left;
+    }
+
+    /* Layout container */
+    .footer-container {
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: top;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .group1,
+    .group2 {
+        flex:1 1 0;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    /* Header styling */
+    footer h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #ffffff;
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 10px;
+    }
+
+    /* Logo and title block */
+    .logo-title-box {
+        display: flex;
+        align-items: center;
+    }
+
+    .logoiiti img {
+        height: 6em;
+    }
+
+    .titlename {
+        font-size: 1.1em;
+        line-height: 1;
+    }
+
+    .titlename p {
+        margin: 0.5em;
+        font-size: 1.2em;
+    }
+
+    /* Sitemap Styles - Updated for single column with right-side dropdowns */
+    .sitemap {
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        gap: 1em;
+        left:2vw;
+        align-items: flex-start;
+        position: relative;
+        /* Move sitemap away from map */
+    }
+
+    .sitemap-column {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+    }
+
+    .sitemap-text {
+        position: relative;
+    }
+
+    .sitemap-text p {
+        margin: 5px 0;
+        font-size: 1em;
+    }
+
+    .sitemap-dropdown-btn {
+        background: none;
+        border: none;
+        color: #b5b5b5;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-family: inherit;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        z-index: 100;
+        text-align: left;
+    }
+
+    .sitemap-dropdown-btn:hover b {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+    .sitemap-arrow {
+        font-size: 0.8em;
+        z-index: 100;
+        transition: transform 0.3s ease;
+    }
+
+    .sitemap-dropdown-btn.active .sitemap-arrow {
+        transform: rotate(90deg);
+    }
+
+    .sitemap-subtext {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 8px;
+        left: 100%;
+        /* aligns the dropdown to the right of the button */
+        background-color: rgba(0, 0, 0, 0.9);
+        border-radius: 8px;
+        z-index: 90;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(0);
+        transition: all 0.3s ease;
+        width: 110px;
+        text-align: left;
+    }
+
+    .sitemap-subtext.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .sitemap-subtext a {
+        color: #cccccc;
+        justify-content: flex-start;
+        text-decoration: none;
+        font-size: 0.9em;
+    }
+
+    .sitemap-subtext a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+    /* Map iframe */
+    iframe {
+        aspect-ratio: 4/3;
+        width: 70%;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* Address section */
+    .h3 {
+        margin-bottom: 5px;
+        font-size: 1.2em;
+        color: #ffffff;
+    }
+
+    .text p {
+        font-size: 1em;
+        color: #cccccc;
+    }
+
+    footer a {
+        color: #b5b5b5;
+        text-decoration: none;
+        font-size: 1.1em;
+    }
+
+    footer a:hover {
+        color: #ffffff;
+    }
+
+    .social-icons img {
+        margin-left: 0;
+        margin-right: 16px;
+        width: 30px;
+        aspect-ratio: 1/1;
+        justify-content: center;
+        font-size: 1.5em;
+    }
+    .social-icons a{
+        border:none;
+    }
+
+    @media(max-width:1000px) and (min-width:401px) {
+
+        .group1,
+        .group2 {
+            flex-direction: column;
+        }
+
+        .group1 {
+            margin-right: 4em;
+        }
+
+        .footer-container {
+            align-items: center;
+        }
+
+        .sitemap {
+            align-items: center;
+        }
+
+        iframe {
+            width: 60%;
+        }
+
+        .sitemap-container {
+            align-items: center;
+        }
+
+    }
+
+    @media (max-width: 400px) {
+        footer {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .group1,
+        .group2 {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-container {
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo-title-box {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sitemap {
+            align-items: flex-start;
+        }
+
+        iframe {
+            width: 90%;
+        }
+    }
+</style>
+<footer>
+    <div class="group1">
+        <div class="footer-container">
+            <div class="logo-title-box">
+                <div class="logoiiti">
+                    <img src="logo1.webp" alt="logo">
+                </div>
+                <div class="titlename">
+                    <p><b>Indian Institute</b></p>
+                    <p><b>of Technology</b></p>
+                    <p><b>Indore</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container sitemap-container" style="justify-content:flex-start;">
+            <div class="sitemap">
+                <div class="sitemap-column">
+                    <div class="sitemap-text">
+                        <button class="sitemap-dropdown-btn">
+                            <b>Home</b>
+                        </button>
+                    </div>
+                </div>
+                <div class="sitemap-column">
+                    <div class="sitemap-text">
+                        <button class="sitemap-dropdown-btn" onclick="toggleSitemapDropdown('about')">
+                            <b>About Us</b>
+                            <span class="sitemap-arrow">▶</span>
+                        </button>
+                        <div class="sitemap-subtext" id="about-sitemap">
+                            <a href="hoddesk.html">HOD Desk</a>
+                            <a href="depins.html">Dept. Insights</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sitemap-column">
+                    <div class="sitemap-text">
+                        <button class="sitemap-dropdown-btn" onclick="toggleSitemapDropdown('academics')">
+                            <b>Academics</b>
+                            <span class="sitemap-arrow">▶</span>
+                        </button>
+                        <div class="sitemap-subtext" id="academics-sitemap">
+                            <a href="btech.html">B.Tech</a>
+                            <a href="mscphy.html">M.Sc</a>
+                            <a href="phdphy.html">PhD</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sitemap-column">
+                    <div class="sitemap-text">
+                        <button class="sitemap-dropdown-btn" onclick="toggleSitemapDropdown('people')">
+                            <b>People</b>
+                            <span class="sitemap-arrow">▶</span>
+                        </button>
+                        <div class="sitemap-subtext" id="people-sitemap">
+                            <a href="faculty.html">Faculty</a>
+                            <a href="admin.html">Admin</a>
+                            <a href="phds.html">PhD Students</a>
+                            <a href="pdocsvis.html">Postdocs/Visitors</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sitemap-column">
+                    <div class="sitemap-text">
+
+                        <button class="sitemap-dropdown-btn" onclick="toggleSitemapDropdown('research')">
+                            <b>Research</b>
+                            <span class="sitemap-arrow">▶</span>
+                        </button>
+                        <div class="sitemap-subtext" id="research-sitemap">
+                            <a href="resdivs.html">Res Divs</a>
+                            <a href="resfacs.html">Res Facs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sitemap-column">
+                    <div class="sitemap-text">
+                        <button class="sitemap-dropdown-btn" onclick="toggleSitemapDropdown('activities')">
+                            <b>Activities</b>
+                            <span class="sitemap-arrow">▶</span>
+                        </button>
+                        <div class="sitemap-subtext" id="activities-sitemap">
+                            <a href="phyclub.html">Phy Club</a>
+                            <a href="seminars.html">Seminars</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="group2">
+        <div class="footer-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.4545692463175!2d75.92056217512514!3d22.52463847952599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962efcccbce7145%3A0x784e8cb69818596b!2sIndian%20Institute%20of%20Technology%20Indore!5e0!3m2!1sen!2sin!4v1742749091048!5m2!1sen!2sin"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div class="text" style="margin: 5px 0;">
+                <div style="display: flex; align-items: center;">
+                    <img src="social-icons/address_icon.png" alt="Address Icon" style="height: 20px;">
+                    <h3 style="margin: 0;">Address</h3>
+                </div>
+                <p style="margin-top:2px;">
+                    Khandwa Road, Simrol, Indore, Madhya Pradesh, 453552
+                </p>
+            </div>
+
+
+        </div>
+
+        <div class="footer-container">
+            <p style="margin: 5px 0; font-size:1.2em;"><b>CONTACT US</b></p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 5px; margin: 2px 0;">
+                <p style="margin: 0; font-size: 1em;"><b>🖂Email:</b></p>
+            </div>
+            <a href="mailto:info@iiti.ac.in" style="font-size: 1em; margin-bottom: 8px;">info@iiti.ac.in</a>
+
+            <h3 style="margin: 5px 0;">Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/school/iit-indore/" target="_blank"><img
+                        src="social-icons/linkedin_logo.webp" alt=""></a>
+                <a href="https://www.instagram.com/iitindoreofficial/" target="_blank"><img
+                        src="social-icons/ig_logo.webp" alt=""></a>
+                <a href="https://twitter.com/IITIOfficial" target="_blank"><img src="social-icons/x_logo.jpg"
+                        alt=""></a>
+                <a href="https://www.facebook.com/profile.php?id=100064798209779" target="_blank"><img
+                        src="social-icons/fb_logo.webp" alt=""></a>
+            </div>
+        </div>
+    </div>
+</footer>

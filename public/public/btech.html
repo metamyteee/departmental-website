@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Tech. in Engineering Physics - IIT Indore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fffaf5;
+        }
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background: #fffaf5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .header img {
+            max-width: 150px;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #004080;
+            text-align: center;
+        }
+        h2 {
+            color: #004080;
+            margin-top: 20px;
+        }
+        p, ul {
+            text-align: justify;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .link {
+            color: #d9534f;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar-container').innerHTML = data);
+  </script>
+
+    <div class="container">
+        <h1>B.Tech Engineering Physics</h1>
+
+        <h2>Overview</h2>
+        <p>The Bachelor of Technology (B.Tech.) in Engineering Physics at IIT Indore, introduced in the 2024-25 academic year, is a 4-year program offered by the Department of Physics. This program provides a rigorous education in physics and engineering, equipping students with the expertise to apply advanced physics principles to solve complex engineering challenges.</p>
+
+        <h2>Program Highlights</h2>
+        <ul>
+            <li><strong>Research Opportunities:</strong> Students gain access to well-equipped laboratories and participate in research projects within the Department of Physics, working on cutting-edge topics alongside faculty.</li>
+            <li><strong>Industry Exposure:</strong> The program offers opportunities for internships and industry collaborations, bridging classroom knowledge with real-world applications.</li>
+        </ul>
+
+        <h2>Curriculum</h2>
+        <p>The curriculum is designed to provide a strong foundation in applied physics while incorporating essential engineering concepts. For a detailed syllabus, course outlines, and additional academic information, <a href="files/B_Tech_EP.pdf" target=_blank class="link">click here to download the syllabus</a>.</p>
+
+        <h2>Career Prospects</h2>
+        <p>Graduates of the B.Tech. in Engineering Physics program are well-suited for careers in:</p>
+        <ul>
+            <li>Research and Development</li>
+            <li>Semiconductor and Electronics Industry</li>
+            <li>Aerospace and Defense Technology</li>
+            <li>Renewable and Sustainable Energy</li>
+            <li>Advanced Studies and Research in Physics and Engineering</li>
+        </ul>
+
+    </div>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

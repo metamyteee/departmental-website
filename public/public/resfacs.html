@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research Facilities</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fffaf5;
+      color: #5a3208;
+      line-height: 1.7;
+    }
+
+    .header {
+      height: 260px;
+      background-color: #f3e8dc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #8a4c0f;
+      font-size: 2.5em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .facility-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 60px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e0d2c0;
+      align-items: center;
+    }
+
+    .facility-text {
+      flex: 1 1 55%;
+      min-width: 300px;
+    }
+
+    .facility-image {
+      flex: 1 1 40%;
+      text-align: center;
+    }
+
+    .facility-image img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .slider-buttons {
+      margin-top: 10px;
+    }
+
+    .slider-buttons button {
+      background-color: #8a4c0f;
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      margin: 0 5px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+
+    .slider-buttons button:hover {
+      background-color: #6b3a0c;
+    }
+
+    h2 {
+      color: #8a4c0f;
+      font-size: 1.8em;
+      margin-top: 0;
+    }
+
+    p, ul {
+      color: #6b4324;
+      font-size: 1.05em;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar-container').innerHTML = data);
+  </script>
+
+  <div class="header">Research Facilities</div>
+
+  <div class="content">
+
+    <p>
+      The department boasts several state-of-the-art research facilities that support cutting-edge work in condensed matter physics, materials science, and interdisciplinary domains. Below are some of our key laboratories and their capabilities.
+    </p>
+
+    <!-- XRD Section -->
+    <div class="facility-section">
+      <div class="facility-text">
+        <h2>X-Ray Diffraction (XRD) Facility</h2>
+        <p><strong>Equipment:</strong> High-resolution X-ray diffractometer with temperature control and in-situ capabilities.</p>
+        <p><strong>Capabilities:</strong></p>
+        <ul>
+          <li>Phase identification of crystalline materials</li>
+          <li>Crystallite size and microstrain analysis</li>
+          <li>Texture and residual stress studies</li>
+          <li>Thin film characterization using GIXRD and reflectometry</li>
+        </ul>
+        <p><strong>Applications:</strong> Structural analysis in materials science, metallurgy, and nanotechnology.</p>
+      </div>
+      <div class="facility-image">
+        <img src="images/xrd1.jpg" alt="XRD Equipment">
+        <div class="slider-buttons">
+          <button>&lt; Prev</button>
+          <button>Next &gt;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Raman Section -->
+    <div class="facility-section">
+      <div class="facility-text">
+        <h2>Raman Spectroscopy Facility</h2>
+        <p><strong>Equipment:</strong> Multi-laser Raman spectrometer with high sensitivity CCD detectors.</p>
+        <p><strong>Capabilities:</strong></p>
+        <ul>
+          <li>Bonding and molecular structure analysis</li>
+          <li>Strain/stress mapping in thin films and semiconductors</li>
+          <li>Raman imaging and temperature-dependent studies</li>
+          <li>Characterization of carbon nanostructures, 2D materials</li>
+        </ul>
+        <p><strong>Applications:</strong> Nanotechnology, optoelectronics, polymer science, and chemistry.</p>
+      </div>
+      <div class="facility-image">
+        <img src="images/raman1.jpg" alt="Raman Spectroscopy">
+        <div class="slider-buttons">
+          <button>&lt; Prev</button>
+          <button>Next &gt;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- UV-Vis Section -->
+    <div class="facility-section">
+      <div class="facility-text">
+        <h2>UV-Visible Spectroscopy Facility</h2>
+        <p><strong>Equipment:</strong> High-resolution UV-Vis spectrometer suitable for both solids and liquids.</p>
+        <p><strong>Capabilities:</strong></p>
+        <ul>
+          <li>Optical absorbance and transmittance measurements</li>
+          <li>Band gap determination using Tauc plots</li>
+          <li>Concentration estimation using Beer-Lambert law</li>
+          <li>Time-resolved measurements and film thickness estimation</li>
+        </ul>
+        <p><strong>Applications:</strong> Photonics, materials research, chemical sensing, and environmental studies.</p>
+      </div>
+      <div class="facility-image">
+        <img src="images/uvvis1.jpg" alt="UV-Vis Spectroscopy">
+        <div class="slider-buttons">
+          <button>&lt; Prev</button>
+          <button>Next &gt;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- HPC Section -->
+    <div class="facility-section">
+      <div class="facility-text">
+        <h2>High-Performance Computing (HPC) Facility</h2>
+        <p><strong>Hardware:</strong> Multi-core CPU and GPU clusters with high RAM and fast interconnects.</p>
+        <p><strong>Capabilities:</strong></p>
+        <ul>
+          <li>First-principles simulations (DFT, ab-initio methods)</li>
+          <li>Molecular dynamics and Monte Carlo simulations</li>
+          <li>Machine learning in materials discovery</li>
+          <li>Data-intensive analysis of experimental results</li>
+        </ul>
+        <p><strong>Applications:</strong> Theoretical physics, computational chemistry, statistical modeling, and AI in materials science.</p>
+      </div>
+      <div class="facility-image">
+        <img src="images/hpc1.jpg" alt="High Performance Computing">
+        <div class="slider-buttons">
+          <button>&lt; Prev</button>
+          <button>Next &gt;</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research Divisions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fffaf5;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      color: #8a4c0f;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      text-decoration: none;
+      color: #8a4c0f;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      padding: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar-container').innerHTML = data);
+  </script>
+
+  <h1>Research Divisions</h1>
+
+  <div class="grid">
+    <a class="card" href="resdiv-cme.html">
+      <img src="images/cme.jpeg" alt="Condensed Matter Experiment" />
+      <div class="card-title">Condensed Matter Experiment</div>
+    </a>
+    <a class="card" href="resdiv-cmt.html">
+      <img src="images/cmt.jpeg" alt="Condensed Matter Theory" />
+      <div class="card-title">Condensed Matter Theory</div>
+    </a>
+    <a class="card" href="resdiv-thep.html">
+      <img src="images/thep.jpg" alt="Theoretical High Energy Physics" />
+      <div class="card-title">Theoretical High Energy Physics</div>
+    </a>
+    <a class="card" href="resdiv-ehep.html">
+      <img src="images/ehep.jpg" alt="Experimental High Energy Physics" />
+      <div class="card-title">Experimental High Energy Physics</div>
+    </a>
+    <a class="card" href="resdiv-ndcn.html">
+      <img src="images/ndcn.png" alt="Non-Linear Dynamics and Complex Networks" />
+      <div class="card-title">Non-Linear Dynamics and Complex Networks</div>
+    </a>
+  </div>
+  <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+  <script src="script.js"></script>
+</body>
+</html>

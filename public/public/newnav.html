@@ -1,0 +1,523 @@
+<style>
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #fffaf5;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    width: 100%;
+    background-color: #fffaf5;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 80vw;
+    margin: auto;
+    z-index: 100;
+  }
+
+  .homepage .navbar {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+
+  .logobox {
+    display: flex;
+  }
+
+  .logo1 img {
+    height: 80px;
+    width: 80px;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0px;
+
+  }
+
+  .title p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+  }
+
+  .title p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .title p:last-child {
+    font-size: 16px;
+    color: #000000;
+  }
+
+  .homepage .title p {
+    color: #ffffff;
+  }
+
+  .homepage .title p:last-child {
+    color: #ffffff;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 2rem;
+    height: 100%;
+    flex: 1;
+  }
+
+  .menuicon {
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .homepage .menuicon svg {
+    fill: rgb(255, 255, 255);
+  }
+
+  .menutext {
+    position: relative;
+    display: inline-block;
+  }
+
+  .menutext::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.5s ease;
+  }
+
+  .dropbtn:hover .menutext::after {
+    width: 100%;
+  }
+
+  .menu .dropbtn {
+    width: clamp(20px, 10vw, 500px);
+    font-size: 14px;
+    line-height: 1;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    padding-top: clamp(10px, 5vw, 40px);
+    padding-bottom: clamp(10px, 5vw, 40px);
+    background-color: transparent;
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;
+    white-space: nowrap;
+    border-radius: 10px;
+  }
+
+  .homepage .menu .dropbtn {
+    color: rgb(255, 255, 255);
+  }
+
+  .menu .dropbtn:hover {
+    padding: auto;
+    transition: background-color 0.4s ease-in-out;
+    background-color: #fcf0e5;
+  }
+
+  .homepage .menu .dropbtn:hover {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .menu .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 1px solid black;
+  }
+
+  .homepage .menu .dropdown-content {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .menu .dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    z-index: 110;
+  }
+
+  .menu .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .menu .dropdown-content a:hover {
+    color: #2b88de;
+  }
+
+  @media (max-width: 1200px) {
+    .menu {
+      display: none;
+    }
+
+    .menuicon {
+      display: block;
+    }
+  }
+
+  /* Sidebar Styles */
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100%;
+    background: linear-gradient(to bottom, #fffbf5, #fff4e6);
+    box-shadow: -2px 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  /* Sidebar Header */
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 2px solid #f0e6d6;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    flex-shrink: 0;
+  }
+
+  .sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .sidebar-logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .sidebar-title h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+  }
+
+  .sidebar-title p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+
+  .sidebar-title .institute {
+    font-size: 12px;
+    color: #999;
+  }
+
+  .sidebar-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+
+  .sidebar-close:hover {
+    background-color: #f0e6d6;
+  }
+
+  /* Sidebar Menu - Updated to prevent footer overlap */
+  .sidebar-menu {
+    padding: 20px 0;
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 80px;
+    overflow-x: hidden;
+    /* Add space for footer */
+  }
+
+  .sidebar-item {
+    display: block;
+    width: 100%;
+    padding: 15px 25px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+  }
+
+  .sidebar-item:hover {
+    background-color: #f0e6d6;
+    color: #d97706;
+  }
+
+  .dropdown-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dropdown-arrow {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar-dropdown.active .dropdown-arrow {
+    transform: rotate(90deg);
+  }
+
+  .sidebar-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: rgba(240, 230, 214, 0.5);
+    border-left: 3px solid #d97706;
+    margin-left: 25px;
+  }
+
+  .sidebar-submenu.active {
+    max-height: 300px;
+  }
+
+  .sidebar-submenu a {
+    display: block;
+    padding: 10px 20px;
+    color: #666;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-submenu a:hover {
+    background-color: #f0e6d6;
+    color: #d97706;
+    font-weight: 500;
+  }
+
+  /* Sidebar Footer - Fixed positioning issue */
+  .sidebar-footer {
+    padding: 20px;
+    background: linear-gradient(to top, #f0e6d6, transparent);
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: auto;
+  }
+
+  .sidebar-footer p {
+    font-size: 12px;
+    color: #999;
+  }
+</style>
+
+<header class="navbar">
+
+  <div class="logobox">
+    <div class="logo1">
+      <img src="logo1.webp" alt="logo">
+    </div>
+    <div class="title">
+      <p>Department</p>
+      <p>of Physics</p>
+      <p>IIT Indore</p>
+    </div>
+  </div>
+  <nav class="menu">
+    <div class="dropdown hideOnMobile"><button class="dropbtn" onclick="location.href='index.html'"><b
+          class="menutext">HOME</b></button></div>
+    <div class="dropdown hideOnMobile"><button class="dropbtn"><b class="menutext">ABOUT US⮟</b></button>
+      <div class="dropdown-content">
+        <a href="hoddesk.html"><b>HOD DESK</b></a>
+        <a href="depins.html"><b>DEPARTMENT INSIGHTS</b></a>
+      </div>
+    </div>
+    <div class="dropdown hideOnMobile"><button class="dropbtn"><b class="menutext">ACADEMICS⮟</b></button>
+      <div class="dropdown-content">
+        <a href="btech.html"><b>B.TECH (ENGG PHYSICS)</b></a>
+        <a href="mscphy.html"><b>M.SC. IN PHYSICS</b></a>
+        <a href="phdphy.html"><b>PHD PROGRAM</b></a>
+      </div>
+    </div>
+    <div class="dropdown hideOnMobile"><button class="dropbtn"><b class="menutext">PEOPLE⮟</b></button>
+      <div class="dropdown-content">
+        <a href="faculty.html"><b>FACULTY</b></a>
+        <a href="admin.html"><b>ADMINISTRATION</b></a>
+        <a href="phds.html"><b>PHD STUDENTS</b></a>
+        <a href="pdocsvis.html"><b>POSTDOCS AND VISITORS</b></a>
+      </div>
+    </div>
+    <div class="dropdown hideOnMobile"><button class="dropbtn"><b class="menutext">RESEARCH⮟</b></button>
+      <div class="dropdown-content">
+        <a href="resdivs.html"><b>RESEARCH DIVISIONS</b></a>
+        <a href="resfacs.html"><b>RESEARCH FACILITIES</b></a>
+      </div>
+    </div>
+    <div class="dropdown hideOnMobile"><button class="dropbtn"><b class="menutext">ACTIVITIES⮟</b></button>
+      <div class="dropdown-content">
+        <a href="phyclub.html"><b>PHYSICS CLUB</b></a>
+        <a href="seminars.html"><b>SEMINARS AND COLLOQUIUMS</b></a>
+      </div>
+    </div>
+    <div class="dropdown hideOnMobile"><button class="dropbtn" onclick="location.href='index.html#CONTACT'"><b
+          class="menutext">CONTACT</b></button></div>
+  </nav>
+  <div class="menuicon" onclick="toggleSidebar()">
+    <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
+      <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+    </svg>
+  </div>
+</header>
+
+
+<!-- Sidebar Overlay -->
+<div id="sidebar-overlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <!-- Sidebar Header -->
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <img src="logo1.webp" alt="Physics Department Logo">
+      <div class="sidebar-title">
+        <h2>Department</h2>
+        <p>of Physics</p>
+        <p class="institute">IIT Indore</p>
+      </div>
+    </div>
+    <button class="sidebar-close" onclick="closeSidebar()">×</button>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <nav class="sidebar-menu">
+    <a href="index.html" class="sidebar-item">HOME</a>
+
+    <div class="sidebar-dropdown">
+      <button class="sidebar-item dropdown-btn" onclick="toggleDropdown('about')">
+        ABOUT US
+        <span class="dropdown-arrow">▶</span>
+      </button>
+      <div id="about-dropdown" class="sidebar-submenu">
+        <a href="hoddesk.html">HOD DESK</a>
+        <a href="depins.html">DEPARTMENT INSIGHTS</a>
+      </div>
+    </div>
+
+    <div class="sidebar-dropdown">
+      <button class="sidebar-item dropdown-btn" onclick="toggleDropdown('academics')">
+        ACADEMICS
+        <span class="dropdown-arrow">▶</span>
+      </button>
+      <div id="academics-dropdown" class="sidebar-submenu">
+        <a href="btech.html">B.TECH (ENGG PHYSICS)</a>
+        <a href="mscphy.html">M.SC. IN PHYSICS</a>
+        <a href="phdphy.html">PHD PROGRAM</a>
+      </div>
+    </div>
+
+    <div class="sidebar-dropdown">
+      <button class="sidebar-item dropdown-btn" onclick="toggleDropdown('people')">
+        PEOPLE
+        <span class="dropdown-arrow">▶</span>
+      </button>
+      <div id="people-dropdown" class="sidebar-submenu">
+        <a href="faculty.html">FACULTY</a>
+        <a href="admin.html">ADMINISTRATION</a>
+        <a href="phds.html">PHD STUDENTS</a>
+        <a href="pdocsvis.html">POSTDOCS AND VISITORS</a>
+      </div>
+    </div>
+
+    <div class="sidebar-dropdown">
+      <button class="sidebar-item dropdown-btn" onclick="toggleDropdown('research')">
+        RESEARCH
+        <span class="dropdown-arrow">▶</span>
+      </button>
+      <div id="research-dropdown" class="sidebar-submenu">
+        <a href="resdivs.html">RESEARCH DIVISIONS</a>
+        <a href="resfacs.html">RESEARCH FACILITIES</a>
+      </div>
+    </div>
+
+    <div class="sidebar-dropdown">
+      <button class="sidebar-item dropdown-btn" onclick="toggleDropdown('activities')">
+        ACTIVITIES
+        <span class="dropdown-arrow">▶</span>
+      </button>
+      <div id="activities-dropdown" class="sidebar-submenu">
+        <a href="phyclub.html">PHYSICS CLUB</a>
+        <a href="seminars.html">SEMINARS AND COLLOQUIUMS</a>
+      </div>
+    </div>
+
+    <a href="index.html#CONTACT" class="sidebar-item">CONTACT</a>
+  </nav>
+
+  <!-- Sidebar Footer -->
+  <div class="sidebar-footer">
+    <p>© 2024 IIT Indore Physics Department</p>
+  </div>
+</div>
+
+<script src="script.js"></script>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ph.D. in Physics - IIT Indore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fffaf5
+        }
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background: #fffaf5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #004080;
+            text-align: center;
+        }
+        h2 {
+            color: #006699;
+            margin-top: 20px;
+        }
+        p, ul {
+            text-align: justify;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .link {
+            color: #d9534f;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar-container').innerHTML = data);
+  </script>
+
+    <div class="container">
+        <h1>Ph.D. in Physics</h1>
+
+        <h2>Program Overview</h2>
+        <p>The Department of Physics at IIT Indore offers a <strong>Doctor of Philosophy (Ph.D.)</strong> program that provides advanced training and research opportunities in a broad spectrum of physics disciplines. The program is designed to nurture independent thinking and innovative research skills, preparing scholars for impactful careers in academia, industry, and beyond.</p>
+
+        <h2>Program Highlights</h2>
+        <ul>
+            <li><strong>Diverse Research Areas:</strong> Specializations include condensed matter physics, quantum technologies, particle physics, nanotechnology, computational physics, and more.</li>
+            <li><strong>State-of-the-Art Facilities:</strong> Students have access to advanced experimental and computational resources, fostering high-quality research outputs.</li>
+            <li><strong>Expert Mentorship:</strong> Scholars work closely with experienced faculty members, receiving guidance to tackle complex scientific problems.</li>
+            <li><strong>Interdisciplinary Approach:</strong> Opportunities to collaborate across disciplines, promoting holistic problem-solving and innovation.</li>
+        </ul>
+
+        <h2>Admission Process</h2>
+        <p>Admission to the Ph.D. program is based on academic qualifications, research aptitude, and performance in an interview. Applicants must have a master’s degree in physics or a related field and may need to qualify through national-level examinations such as <strong>GATE</strong> or <strong>CSIR-UGC NET</strong>.</p>
+
+        <h2>Research Focus Areas</h2>
+        <p>The Ph.D. program supports research in cutting-edge areas, including but not limited to:</p>
+        <ul>
+            <li>Quantum Mechanics and Quantum Computing</li>
+            <li>Advanced Materials and Condensed Matter Physics</li>
+            <li>High-Energy Physics and Particle Theory</li>
+            <li>Optics and Photonics</li>
+            <li>Computational Physics and Simulations</li>
+        </ul>
+
+        <h2>Download the Ph.D. Program Brochure</h2>
+        <p>For detailed information about research areas, faculty profiles, and program requirements, <a href="phd_brochure.pdf" class="link">click here to download the Ph.D. program brochure</a>.</p>
+
+        <h2>Career Prospects</h2>
+        <p>Graduates of the Ph.D. program in Physics from IIT Indore are highly sought after in:</p>
+        <ul>
+            <li>Academic positions in prestigious institutions worldwide</li>
+            <li>Research and Development roles in industrial and government laboratories</li>
+            <li>Emerging fields like quantum technologies, nanotechnology, and sustainable energy solutions</li>
+            <li>Science policy, consulting, and scientific entrepreneurship</li>
+        </ul>
+
+        <p>For more details on eligibility, application procedures, and deadlines, please visit the <a href="https://academic.iiti.ac.in/admission.php" class="link">IIT Indore Admissions Portal</a>.</p>
+    </div>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+    <script src="script.js"></script>
+</body> 
+</html>

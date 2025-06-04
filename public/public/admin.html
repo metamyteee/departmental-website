@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administration</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f6f1;
+      color: #3a2c19;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #693c17;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+
+    .admin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 90vw;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1451px) {
+      .admin-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1450px) {
+      .admin-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .admin-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .admin-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .admin-card {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .admin-card img {
+      width: 140px;
+      height: 140px;
+      border-radius: 16px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 4px solid #fceee0;
+    }
+
+    .admin-name {
+      background-color: #8a4c0f;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      font-weight: bold;
+      font-size: 1.1em;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    .admin-info {
+      text-align: left;
+      font-size: 0.95em;
+      max-height: 150px;
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+
+    .admin-info p {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar-container').innerHTML = data);
+  </script>
+  <div class="container">
+    <h1>Administrative Team</h1>
+    <div class="admin-grid">
+
+      <div class="admin-card">
+        <img src="admin-images/director.jpg" alt="Mr. Rahul Navgire" />
+        <div class="admin-name">Mr. Rahul Navgire</div>
+        <div class="admin-info">
+          <p><i>Jr. Superintendent</i></p>
+          <p> Mr. Rahul serves as a Jr. Superintendent, overseeing the department’s paperwork and administrative
+            processes with exceptional efficiency.</p>
+          <p><b>Email:</b> rnavgire@iiti.ac.in</p>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <img src="admin-images/mrprashant.jpeg" alt="Mr. Prashant Gupta" />
+        <div class="admin-name">Mr. Prashant Gupta</div>
+        <div class="admin-info">
+          <p><i>Junior Lab Assistant</i></p>
+          <p> Mr. Prashant Gupta plays an essential role as technical staff in ensuring the smooth functioning of the
+            undergraduate and postgraduate laboratories.</p>
+          <p><b>Office Address:</b> PoD 1E 205 B-Tech Physics Laboratory</p>
+          <p><b>Phone:</b> 0731-660 Ext. 3380</p>
+          <p><b>Email:</b> prashantgupta@iiti.ac.in</p>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <img src="admin-images/mrnitin.jpg" alt="Dr. Nitin Upadhyay" />
+        <div class="admin-name">Dr. Nitin Upadhyay</div>
+        <div class="admin-info">
+          <p><i>Senior Lab Assistant</i></p>
+          <p> Dr. Nitin Upadhyay is a key technical staff member responsible for ensuring the smooth functioning of the
+            department’s research laboratories.</p>
+          <p><b>Office Address:</b> Hydrogen Building</p>
+          <p><b>Phone:</b> 0731-660, Ext: 3406</p>
+          <p><b>Email:</b> nitinu@iiti.ac.in</p>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <img src="admin-images/mrvedprakash.jpg" alt="Mr. Ved Prakash" />
+        <div class="admin-name">Mr. Ved Prakash</div>
+        <div class="admin-info">
+          <p><i>Attendant</i></p>
+          <p>Mr. Ved Prakash is a senior clerk who ensures a seamless movement of official documents from the department
+            to various offices across the institute.</p>
+          <p><b>Office Address: </b>PoD 1D 602 (Physics Office)</p>
+          <p><b>Phone:</b> 0731-660 Ext: 3417</p>
+          <p><b>Email:</b></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>

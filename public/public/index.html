@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Physics IITI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="homepage">
+    <div id="navbar-container"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar-container').innerHTML = data);
+  </script>
+    
+    
+    <div class="home-image-container">
+        <section class="image-slider" id="slider" style="background-image: url('image2.png');"></section>
+
+    </div>
+    <section class="typed-text-container">
+        <center>
+            <h1>
+                <span class="static-text">Welcome to IITI phsyics department webpage</span>
+                <span class="typed-text"></span><span class="cursor"></span>
+            </h1>
+        </center>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    </section>
+
+    <section class="About-us-container" id="ABOUT US">
+        <center>
+            <h1>About Us</h1>
+        </center>
+        <div class="about-us-content">
+            <div class="About-us-container-left">
+                <h3>Physics Department</h3>
+                <p>The Department of Physics at IIT Indore was established in 2009. The department offers a B.Tech
+                    program in Engineering Physics, an M.Sc. program in Physics, and a Ph.D. program in Physics. The
+                    department has a vibrant research environment with research areas ranging from theoretical and
+                    experimental condensed matter physics, quantum information, quantum optics, and quantum computing to
+                    high energy physics, astrophysics, and cosmology. The department has a strong focus on
+                    interdisciplinary research and collaborations with other departments and institutions. The
+                    department has state-of-the-art research facilities and laboratories for both theoretical and
+                    experimental research.</p>
+            </div>
+            <div id="About-us-container-right">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+                <div id="threejs-container"></div>
+
+            </div>
+    </section>
+    <section class="news-container">
+        <div class="news-text">
+
+        </div>
+    </section>
+<section class="events-section">
+  <center><h1 class="title">EVENTS</h1></center>
+  <div class="carousel-wrapper">
+    <button class="nav-btn left-btn" id="prevBtn">&#10094;</button>
+    <div class="cards-container" id="cardsContainer"></div>
+    <button class="nav-btn right-btn" id="nextBtn">&#10095;</button>
+  </div>
+</section>
+
+
+    <div id="footer-container"></div>
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('footer-container').innerHTML = html;
+            });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</htm

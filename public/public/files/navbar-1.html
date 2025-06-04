@@ -1,0 +1,168 @@
+<header class="navbar">
+    <div class="logo1">
+        <img src="logo1.webp" alt="logo">
+    </div>
+    <div class="title">
+        <p>Department of Physics</p>
+        <p>IIT Indore</p>
+    </div>
+
+    <nav class="menu" id="navMenu">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="location.href='index.html'"><b>HOME</b></button>
+        </div>
+
+
+        <div class="dropdown">
+            <button class="dropbtn"><b>ABOUT US</b></button>
+            <div class="dropdown-content">
+                <a href="hoddesk.html"><b>HOD DESK</b></a>
+                <a href="depins.html"><b>DEPARTMENT INSIGHTS</b></a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><b>ACADEMICS</b></button>
+            <div class="dropdown-content">
+                <a href="btech.html"><b>B.TECH (ENGG PHYSICS)</b></a>
+                <a href="mscphy.html"><b>M.SC. IN PHYSICS</b></a>
+                <a href="phdphy.html"><b>PHD PROGRAM</b></a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><b>PEOPLE</b></button>
+            <div class="dropdown-content">
+                <a href="faculty.html"><b>FACULTY</b></a>
+                <a href="admin.html"><b>ADMINISTRATION</b></a>
+                <a href="phds.html"><b>PHD STUDENTS</b></a>
+                <a href="pdocsvis.html"><b>POSTDOCS AND VISITORS</b></a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><b>RESEARCH</b></button>
+            <div class="dropdown-content">
+                <a href="resdivs.html"><b>RESEARCH DIVISIONS</b></a>
+                <a href="resfacs.html"><b>RESEARCH FACILITIES</b></a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><b>ACTIVITIES</b></button>
+            <div class="dropdown-content">
+                <a href="phyclub.html"><b>PHYSICS CLUB</b></a>
+                <a href="seminars.html"><b>SEMINARS AND COLLOQUIUMS</b></a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="location.href='index.html#CONTACT'"><b>CONTACT</b></button>
+        </div>
+
+    </nav>
+    <!-- <div class="logo2">
+        <img src="logo2.png" alt="logo">
+    </div> -->
+</header>
+
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 13px;
+        padding-top: 13px;
+        width: 100%;
+        background-color: #fffaf5;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left:8 px;
+        text-align: left;
+    }
+
+    .title p {
+        margin: 0;
+        padding: 0;
+        line-height: 1.3;
+    }
+
+    .title p:first-child {
+        font-size: 22px;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .title p:last-child {
+        font-size: 16px;
+        color: #555555;
+    }
+
+
+    .logo1 img {
+        height: 80px;
+        display: block;
+        width: 80px;
+    }
+
+    .logo1 img {
+        margin-left: 80px;
+    }
+
+    .menu {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .menu .dropbtn {
+        font-size: 18px;
+        border: none;
+        outline: none;
+        color: rgb(0, 0, 0);
+        padding: 10px 15px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .menu .dropbtn:hover {
+        padding: auto;
+    }
+
+    .menu .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        border: 1px solid black;
+    }
+
+    .menu .dropdown-content a {
+        color: rgb(255, 255, 255);
+        padding: 10px 15px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .menu .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .menu .dropdown-content a:hover {
+        color: #2b88de;
+    }
+</style>

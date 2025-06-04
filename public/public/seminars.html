@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seminars & Colloquiums | Department of Physics, IIT Indore</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf5;
+      margin: 40px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: auto;
+      background: #fffaf5;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+      color: #693c17;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.05em;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #e0dcd6;
+    }
+
+    th {
+      background-color: #e6dacf;
+      color: #5a3208;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f7f2ec;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar-container').innerHTML = data);
+  </script>
+
+  <div class="container">
+    <h1>Seminars & Colloquiums</h1>
+
+    <p>
+      The Department of Physics at IIT Indore regularly organizes colloquia, inviting distinguished scientists,
+      researchers, and industry experts from across the globe. These sessions provide faculty, students, and researchers
+      with opportunities to engage with cutting-edge topics in physics and related fields.
+    </p>
+
+    <p>
+      The colloquia serve as a platform for knowledge sharing and discussions on recent advancements, fostering an
+      environment of intellectual growth and collaboration. We encourage everyone in our academic community to attend
+      these events and participate in the exchange of ideas that drive innovation in our department.
+    </p>
+
+    <h2>Recent Colloquium Speakers</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>S.No.</th>
+          <th>Name of the event</th>
+          <th>Name of Coordinator (s)</th>
+          <th>Date of the event</th>
+          <th>"Total No. of Participants
+            (Faculty & Students)"</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>67th DAE-BRNS Symposium on Nuclear Physics</td>
+          <td>Prof. Raghunath Sahoo</td>
+          <td>December 7-13, 2023</td>
+          <td>500</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Bernoulli Society (half-day autumn school on hypergraphs)</td>
+          <td>Prof. Sarika Jalan, Sofia Olhede, and Gesine Reinert, Vlado Batagelj, </td>
+          <td>October 12, 2023</td>
+          <td>30</td>
+          <td>BRNS funded</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Mini-symposia on “Coupled phase oscillators: Fundamentals to applications in Brain and Power Grid” </td>
+          <td>Prof. Sarika jalan, Mehrnaz Anvari</td>
+          <td>September 3-8, 2023</td>
+          <td>200</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Science Day 2024 </td>
+          <td>Physics Club (Dr. Alestin Mawrie, Dr. Onkar Game)</td>
+          <td>February 28, 2024</td>
+          <td>70</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>"Self-healing in Hybrid halide Perovskite Photovoltaic Devices
+            Expert Talk by Prof. Shaibal K Sarkar (IIT-B) on Perovskite Solar Cells"</td>
+          <td>Dr. Onkar Game</td>
+          <td>February 23, 2024</td>
+          <td>30</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Women Empowerment: Career Opportunities in Science</td>
+          <td>Prof. Krushna R. Mavani</td>
+          <td>March 15, 2024</td>
+          <td>45</td>
+          <td>"Partially funded by GIPWG-IPAEvent was more specific to IITI women scientists and students
+            "</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Superconducting van der Waals devices for quantum technology</td>
+          <td>Prof. Mandar Deshmukh</td>
+          <td>29th August 2024</td>
+          <td>--</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>String Theory: Model and Framework</td>
+          <td>Prof. Sunil Mukhi</td>
+          <td>17th October 2024</td>
+          <td>--</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Colossal low-field magnetoresistance in sub-GHz frequency in Mn oxides</td>
+          <td>Prof. R. Mahendiran</td>
+          <td>2nd December 2024</td>
+          <td>--</td>
+          <td>--</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
