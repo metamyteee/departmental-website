@@ -1,50 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Graduated Ph.D. Students | Department of Physics</title>
   <style>
+    html,
     body {
-      margin: 0;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 4vw;
       font-family: Arial, sans-serif;
       background-color: #f9f6f1;
       color: #3a2c19;
+      line-height: 1.6;
     }
 
     .container {
-      max-width: 950px;
-      margin: 40px auto;
-      padding: 0 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: #fffaf5;
+      padding: 1vw;
+      border-radius: 8px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+
     }
 
-    h1, h2 {
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: auto;
+      height: 60vh;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Firefox */
+    .table-wrapper {
+      scrollbar-width: thin;
+      scrollbar-color: #c2b9b0 #f0e8df;
+    }
+
+    /* WebKit (Chrome, Safari, Edge) */
+    .table-wrapper::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .table-wrapper::-webkit-scrollbar-thumb {
+      background-color: #c2b9b0;
+      border-radius: 6px;
+    }
+
+    .table-wrapper::-webkit-scrollbar-track {
+      background: #f0e8df;
+    }
+
+
+    h1,
+    h2 {
       text-align: center;
       color: #693c17;
     }
 
     h1 {
-      font-size: 2.2em;
+      font-size: 1.5em;
       margin-bottom: 20px;
     }
 
     p {
-      font-size: 1.05em;
+      font-size: 1em;
       line-height: 1.7;
       margin-bottom: 20px;
     }
 
     table {
       width: 100%;
+      min-width: 950px;
       border-collapse: collapse;
       margin-top: 30px;
       background-color: #fff;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
     }
 
-    th, td {
-      padding: 12px 16px;
+    th,
+    td {
+      padding: 0px 16px;
       text-align: left;
+      font-size: 0.7em;
       border-bottom: 1px solid #e0dcd6;
     }
 
@@ -57,8 +101,23 @@
     tr:nth-child(even) {
       background-color: #f7f2ec;
     }
+
+    .search-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+    }
+
+    .search-wrapper input {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
   </style>
 </head>
+
 <body>
   <div id="navbar-container"></div>
 
@@ -70,645 +129,94 @@
 
   <div class="container">
     <h1>Graduated PhD Students</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>S.No.</th>
-          <th>Name</th>
-          <th>Present Status</th>
-          <th>Program</th>
-          <th>Graduation year</th>
-          <th>Supervisor 1</th>
-          <th>Thesis Title</th>
-        </tr>
-      </thead>
-      <tbody>
-       <tr>
-        <td>1</td>
-        <td>ARADHANA SINGH</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>May 29, 2015</td>
-        <td>Prof. Sarika Jalan</td>
-        <td>Cluster synchronization in delayed and multiplex networks</td>
-       </tr>
-       <tr>
-        <td>2</td>
-        <td>FOZIA AZIZ</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>September 15, 2014</td>
-        <td>Prof. Krushna Mavani</td>
-        <td>Correlations of structure and Magnetism in perovskite thin films</td>
-       </tr>
-       <tr>
-        <td>3</td>
-        <td>MAHESH CHANDRA</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>March 2, 2016</td>
-        <td>Prof. Krushna Mavani</td>
-        <td>Phase transitions n Ndnio3 Thin Films and Ndnio3/Ndmno3 Multilayers: Influence of Strain and Doping</td>
-       </tr>
-       <tr>
-        <td>4</td>
-        <td>AJAY KUMAR</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>August 12, 2016</td>
-        <td>Dr. Ankhi Roy</td>
-        <td>Conceptual Design of the Lambda Disks Detector for the PANDA Experiment</td>
-       </tr>
-       <tr>
-        <td>5</td>
-        <td>SANJIV KUMAR DWIVEDI</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>April 22, 2016</td>
-        <td>Prof. Sarika Jalan</td>
-        <td>Spectral analysis of complex networks</td>
-       </tr>
-       <tr>
-        <td>6</td>
-        <td>AJAY PRATAP SINGH</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>--</td>
-        <td>Dr. Manavendra Mahato</td>
-        <td>Black holes and anisotropic Spacetimes</td>
-       </tr>
-       <tr>
-        <td>7</td>
-        <td>NAJIMUDDIN KHAN</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>February 6, 2017</td>
-        <td>Prof. Subhendu Rakshit</td>
-        <td>Exploring Extensions of the Scalar Sector of the Standard Model</td>
-       </tr>
-       <tr>
-        <td>8</td>
-        <td>ADITYA NATH MISHRA</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>July 5, 2016</td>
-        <td>Dr. Raghunath Sahoo</td>
-        <td>Multihadron Production in High-energy Collisions and Forward Rapidity Measurement of Inclusive Photons in Pb+Pb Collisions at â</td>
-       </tr>
-       <tr>
-        <td>9</td>
-        <td>POOJA PAREEK</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>July 27, 2018</td>
-        <td>Dr. Raghunath Sahoo</td>
-        <td>Measurement of Neutral Pion and Eta Mesons in Proton+Proton Collisions with ALICE at the Large Hadron Collider</td>
-       </tr>
-       <tr>
-        <td>10</td>
-        <td>PRITPAL KAUR SANDHU</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>November 8, 2018</td>
-        <td>Dr. Abhirup Datta</td>
-        <td>Diffuse Radio Emission in a Galaxy Cluster Merger at frequency ranging from 150 MHz to 18 GHz</td>
-       </tr>
-       <tr>
-        <td>11</td>
-        <td>PRIYADARSHINI SUCHISMITA BEHERA</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>November 24, 2017</td>
-        <td>Dr. Preeti A. Bhobe</td>
-        <td>Exploring Correlation between Local Structure, Magnetic and Transport Properties of Multifunctional Cr-based Chalcospinels</td>
-       </tr>
-       <tr>
-        <td>12</td>
-        <td>HARI MOHAN RAI</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>October 3, 2017</td>
-        <td>Dr. Pankaj R. Sagdeo</td>
-        <td>Observation, Evidence and Origin of Room Temperature Magnetodielectric Effect in Mn/Fe Doped LaGaO3</td>
-       </tr>
-       <tr>
-        <td>13</td>
-        <td>SHAILENDRA KUMAR SAXENA</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>September 26, 2016</td>
-        <td>Dr. Rajesh Kumar</td>
-        <td>Fabrication and Optoelectronic Properties of Silicon Nanostructure</td>
-       </tr>
-       <tr>
-        <td>14</td>
-        <td>SUDEEP GHOSH</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>September 16, 2019</td>
-        <td>Dr. Ankhi Roy</td>
-        <td>Study of the Decay Matrix for - using CLAS Detector at JLab</td>
-       </tr>
-       <tr>
-        <td>15</td>
-        <td>ANKITA GOSWAMI</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>April 8, 2019</td>
-        <td>Dr. Ankhi Roy</td>
-        <td>Study of Ã</td>
-       </tr>
-       <tr>
-        <td>16</td>
-        <td>SURJENDU BIKASH DUTTA</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>September 28, 2020</td>
-        <td>Dr. Sharad Gupta</td>
-        <td>Optical Spectroscopy Based Urine Analysis for Disease Diagnosis</td>
-       </tr>
-       <tr>
-        <td>17</td>
-        <td>AMIT KUMAR RANA</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>March 28, 2018</td>
-        <td>Dr. Parasharam M. Shirage</td>
-        <td>Controlled Growth of Zinc Oxide Nanostructures for Multifunctional Applications</td>
-       </tr>
-       <tr>
-        <td>18</td>
-        <td>ARVIND KHUNTIA</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>March 13, 2019</td>
-        <td>Dr. Raghunath Sahoo</td>
-        <td>Study of K</td>
-       </tr>
-       <tr>
-        <td>19</td>
-        <td>DHANANJAYA THAKUR</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>August 29, 2019</td>
-        <td>Dr. Raghunath Sahoo</td>
-        <td>Multiplicity Dependence of Forward Rapidity J/Ã</td>
-       </tr>
-       <tr>
-        <td>20</td>
-        <td>HARISANKAR S</td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td>August 25, 2020</td>
-        <td>Prof. Krushna Mavani</td>
-        <td>Structural, Electronic and Magnetic Properties of RNiO3 (R=Pr, Nd) Thin Films and Layered structures</td>
-       </tr>
-       <tr>
-        <td>21</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>22</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>23</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>24</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>25</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>26</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>27</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>28</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>29</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>30</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>31</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>32</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>33</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>34</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>35</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>36</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>37</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>38</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>39</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>40</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>41</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>42</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>43</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>44</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>45</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>46</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>47</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>48</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>49</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td>50</td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       <tr>
-        <td></td>
-        <td></td>
-        <td>Graduated</td>
-        <td>Ph.D.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-       </tr>
-       
-       
-      </tbody>
-    </table>
+    <div class="search-wrapper">
+      <input type="text" id="facultySearch" placeholder="Search Faculty..." />
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>S.No.</th>
+            <th>Name</th>
+            <th>Present Status</th>
+            <th>Program</th>
+            <th>Graduation Year</th>
+            <th>Supervisor</th>
+            <th>Thesis Title</th>
+          </tr>
+        </thead>
+        <tbody id="phdTableBody">
+          <!-- Content will be inserted here dynamically -->
+        </tbody>
+      </table>
+    </div>
   </div>
-  <div id="footer-placeholder"></div>
 
-    <script>
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer-placeholder").innerHTML = data;
-            });
-    </script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script>
+    // Load and parse CSV
+    fetch('phds.csv')
+      .then(response => response.text())
+      .then(csv => {
+        const data = Papa.parse(csv, { header: true }).data;
+        const tbody = document.getElementById('phdTableBody');
+        data.forEach((row, index) => {
+          if (row.Name) {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${row.Name}</td>
+            <td>${row.Status}</td>
+            <td>${row.Program}</td>
+            <td>${row.GraduationYear}</td>
+            <td>${row.Supervisor}</td>
+            <td>${row.ThesisTitle}</td>
+          `;
+            tbody.appendChild(tr);
+          }
+        });
+      });
+
+    // Search filter
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const filter = this.value.toLowerCase();
+      const rows = document.querySelectorAll('#phdTableBody tr');
+
+      let visibleIndex = 0;
+      rows.forEach(row => {
+        if (row.textContent.toLowerCase().includes(filter)) {
+          row.style.display = '';
+          row.style.backgroundColor = (visibleIndex % 2 === 0) ? '#fff' : '#f7f2ec';
+          visibleIndex++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+
+  </script>
+
+
+  <script>
+    document.getElementById('searchInput').addEventListener('keyup', function () {
+      const filter = this.value.toLowerCase();
+      const rows = document.querySelectorAll('table tbody tr');
+
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(filter) ? '' : 'none';
+      });
+    });
+  </script>
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
   <script src="script.js"></script>
 </body>
+
 </html>

@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Faculty</title>
   <link rel="stylesheet" href="facultystyle.css">
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
 </head>
 
 <body>
@@ -18,300 +20,74 @@
   </script>
   <div class="container">
     <h1>Faculty Members</h1>
-    <div class="faculty-grid">
-
-      <div class="faculty-card" id="prof-ankhi-roy">
-        <img src="prof-images/prof-ankhi-roy.jpg" alt="Prof. Ankhi Roy" />
-        <div class="faculty-name">Prof. Ankhi Roy</div>
-        <div class="faculty-info">
-          <p><i>Professor</i></p>
-          <p><strong>Research Interests:</strong></p>
-          <p>1. Heavy Flavours in Heavy Ion Collisions</p>
-          <p>2. Detector and Physics Simulation</p>
-          <p>3. QGP Phenomenology</p>
-          <p><strong>Experiments:</strong> ALICE@CERN, CBM@GSI, EPIC@BNL</p>
-          <p><strong>Email:</strong> ankhi@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="https://sites.google.com/iiti.ac.in/drankhiroy/home" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-rajesh-kumar">
-        <img src="prof-images/prof-rajesh-kumar.jpg" alt="Prof. Rajesh Kumar" />
-        <div class="faculty-name">Prof. Rajesh Kumar</div>
-        <div class="faculty-info">
-          <p><i>Assistant Professor</i></p>
-          <p><strong>Research Interests:</strong></p>
-          <p>1. Experimental Solid State Physics</p>
-          <p>2. Organic and Inorganic Semiconductors</p>
-          <p>3. Nanostructures</p>
-          <p><strong>Email:</strong> rajeshkumar@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="https://sites.google.com/view/madlabrk/" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-pankaj-sagdeo">
-        <img src="prof-images/prof-pankaj-sagdeo.jpg" alt="Prof. Pankaj R Sagdeo" />
-        <div class="faculty-name">Prof. Pankaj R Sagdeo</div>
-        <div class="faculty-info">
-          <p><i>Professor</i></p>
-          <p><strong>Research Interests:</strong></p>
-          <p>1. In house development of scientific instrument</p>
-          <p>2. Novel experimental
-            technique and or methodology for material characterization</p>
-          <p><strong>Email:</strong> prs@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="https://people.iiti.ac.in/~prs/" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-raghunath-sahoo">
-        <img src="prof-images/prof-raghunath-sahoo.jpg" alt="Prof. Raghunath Sahoo" />
-        <div class="faculty-name">Prof. Raghunath Sahoo</div>
-        <div class="faculty-info">
-          <p><i>Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. Relativistic Heavy Ion Collisions: Quark-Gluon Plasma</p>
-          <p>2. Phenomenology of Quark-Gluon Plasma, Global Properties and Heavy Flavors</p>
-          <p><strong>Email:</strong> raghunath@iiti.ac.in</p>
-        </div>
-        <a class="read-more"href="https://people.iiti.ac.in/~raghunath/index.html" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-preeti-bhobe">
-        <img src="prof-images/prof-preeti-bhobe.jpg" alt="Prof. Preeti A. Bhobe" />
-        <div class="faculty-name">Prof. Preeti A. Bhobe</div>
-        <div class="faculty-info">
-          <p><i>Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. Study of crystal and electronic structure</p>
-          <p>2. Magnetic properties of functional materials</p>
-          <p>3. X-ray Absorption Fine Structure (XAFS)</p>
-          <p>4. Photoemission Spectroscopy (PES)</p>
-          <p><strong>Email:</strong> pbhobe@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="https://people.iiti.ac.in/~pbhobe/index.html" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-krushna-mavani">
-        <img src="prof-images/prof-krushna-mavani.jpg" alt="Prof. Krushna R Mavani" />
-        <div class="faculty-name">Prof. Krushna R Mavani</div>
-        <div class="faculty-info">
-          <p><i>Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. Structural, Electronic, Magnetic and optical properties and their correlations</p>
-          <p>2. Thin Films and Multilayers</p>
-          <p>3. Terahertz Spectroscopy</p>
-          <p>4. Nanomaterials</p>
-          <p><strong>Email:</strong> krushna@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="http://pldthzthinfilm.wixsite.com/krushnarmavani" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-subhendu-rakshit">
-        <img src="prof-images/prof-subhendu-rakshit.jpg" alt="Prof. Subhendu Rakshit" />
-        <div class="faculty-name">Prof. Subhendu Rakshit</div>
-        <div class="faculty-info">
-          <p><i>Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. Particle physics phenomenology</p>
-          <p>2. Neutrino physics</p>
-          <p>3. Higgs search at LHC</p>
-          <p>4. Dark matter</p>
-          <p><strong>Email:</strong> rakshit@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="https://sites.google.com/iiti.ac.in/srakshit/home?authuser=1" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-sudeshna-chattopadhyay">
-        <img src="prof-images/prof-sudeshna-chattopadhyay.jpg" alt="Prof. Sudeshna Chattopadhyay" />
-        <div class="faculty-name">Prof. Sudeshna Chattopadhyay</div>
-        <div class="faculty-info">
-          <p><i>Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. Surface and Interface Science</p>
-          <p>2. Soft matter and nanomaterials</p>
-          <p>3. Organic/Inorganic hybrid materials</p>
-          <p>4. Energy conversion and storage research</p>
-          <p>5. Battery materials</p>
-          <p><strong>Email:</strong> sudeshna@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="https://sudeshnahomepage.wixsite.com/sudeshna" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-somaditya-sen">
-        <img src="prof-images/prof-somaditya-sen.jpg" alt="Prof. Somaditya Sen" />
-        <div class="faculty-name">Prof. Somaditya Sen</div>
-        <div class="faculty-info">
-          <p><i>Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. Structure correlated physical properties, Ferroelectrics, magnetic materials, multiferroics,
-            Magneto-dielectrics, Optoelectronic materials, Light/Gas Sensing materials, Nanomaterials to Single
-            crystals.</p>
-          <p>2. Simple and Complex oxides: Titanates, Manganites, Vanadates, Dielectric Resonator Antennas, Energy
-            materials.</p>
-          <p><strong>Email:</strong> sens@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="https://sites.google.com/iiti.ac.in/smart-group-somaditya-sen/" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-sarika-jalan">
-        <img src="prof-images/prof-sarika-jalan.png" alt="Prof. Sarika Jalan" />
-        <div class="faculty-name">Prof. Sarika Jalan</div>
-        <div class="faculty-info">
-          <p><i>Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. Complex Systems and nonlinear dynamics</p>
-          <p>2. Systems biology, Spectral graph theory, Applications of Random matrix theory to biological and social
-            systems</p>
-          <p>3. Synchronization, Coupled chaotic, Delayed networks, Extreme events, Adaptation and Evolution</p>
-          <p><strong>Email:</strong> sarika@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="https://sites.google.com/view/sarikajalan/" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-srimanta-pakhira">
-        <img src="prof-images/prof-srimanta-pakhira.jpg" alt="Dr. Srimanta Pakhira" />
-        <div class="faculty-name">Dr. Srimanta Pakhira</div>
-        <div class="faculty-info">
-          <p><i>Associate Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. Applications of Density Functional Theory (DFT)</p>
-          <p>2. Strong Correlation Effects in Electronic Materials</p>
-          <p>3. Hybrid Organic-Inorganic Perovskites and Theory of Novel 2D Materials</p>
-          <p>4. Alkali-ion Battery, Novel Batteries Technology, Renewable Energy Materials, Solar Cells, Transition
-            Metal Dichalcogenides (TMDs), H2 and O2 Evolution Reactions</p>
-          <p><strong>Email:</strong> spakhira@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="https://spakhirafsu.wixsite.com/acmslab" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-manavendra-mahato">
-        <img src="prof-images/prof-manavendra-mahato.jpg" alt="Dr. Manvendra Mahato" />
-        <div class="faculty-name">Dr. Manvendra Mahato</div>
-        <div class="faculty-info">
-          <p><i>Associate Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. Gauge/gravity correspondence</p>
-          <p>2. String Theory</p>
-          <p>3. General relativity</p>
-          <p><strong>Email:</strong> manav@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="https://people.iiti.ac.in/~manav/" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-dipankar-das">
-        <img src="prof-images/prof-dipankar-das.jpg" alt="Dr. Dipankar Das" />
-        <div class="faculty-name">Dr. Dipankar Das</div>
-        <div class="faculty-info">
-          <p><i>Assistant Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. Phenomenology of the Higgs boson</p>
-          <p>2. Flavor Physics</p>
-          <p>3. Interplay between Neutrino mass and Dark Matter</p>
-          <p><strong>Email:</strong> d.das@iiti.ac.in</p>
-        </div>
-        <a class="read-more"  href="https://people.iiti.ac.in/~d.das/" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-debajyoti-sarkar">
-        <img src="prof-images/prof-debajyoti-sarkar.jpeg" alt="Dr. Debajyoti Sarkar" />
-        <div class="faculty-name">Dr. Debajyoti Sarkar</div>
-        <div class="faculty-info">
-          <p><i>Assistant Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. AdS/CFT duality and its applications in strongly coupled field theory</p>
-          <p>2. Quantum information</p>
-          <p>3. Topics in gravitational and black hole physics.</p>
-          <p><strong>Email:</strong> dsarkar@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="https://people.iiti.ac.in/~dsarkar/" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-onkar-game">
-        <img src="prof-images/prof-onkar-game.jpg" alt="Dr. Onkar Game" />
-        <div class="faculty-name">Dr. Onkar Game</div>
-        <div class="faculty-info">
-          <p><i>Assistant Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. Photovoltaics</p>
-          <p>2. Organic and inorganic semiconductors</p>
-          <p>3. Halide perovskites </p>
-          <p>4. Optoelectronics</p>
-          <p><strong>Email:</strong> ogame@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="https://sites.google.com/view/dr-onkar-game-iit-indore/home" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-naresh-kumar-kumawat">
-        <img src="prof-images/prof-naresh-kumar-kumawat.png" alt="Dr. Naresh Kumar Kumawat" />
-        <div class="faculty-name">Dr. Naresh Kumar Kumawat</div>
-        <div class="faculty-info">
-          <p><i>Assistant Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. Metal Halide Perovskite (MHP) and Organic Semiconductors</p>
-          <p>2. Light-Emitting Diodes (PeLEDs) and Solar Cells</p>
-          <p>3. Device Characteristics</p>
-          <p>4. Device Physics</p>
-          <p><strong>Email:</strong> nkumawat@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-alestin-mawrie">
-        <img src="prof-images/prof-alestin-mawrie.jpg" alt="Dr. Alestin Mawrie" />
-        <div class="faculty-name">Dr. Alestin Mawrie</div>
-        <div class="faculty-info">
-          <p><i>Assistant Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. Mesoscale and Nanoscale Physics</p>
-          <p>2. Low Dimensional Systems</p>
-          <p>3. Topological Insulators</p>
-          <p><strong>Email:</strong> amawrie@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="https://sites.google.com/view/dr-alestin-mawrie" target="_blank">Read more</a>
-      </div>
-
-      <div class="faculty-card" id="prof-mritunjay-verma">
-        <img src="prof-images/prof-mritunjay-verma.jpg" alt="Dr. Mritunjay Kumar Verma" />
-        <div class="faculty-name">Dr. Mritunjay Kumar Verma</div>
-        <div class="faculty-info">
-          <p><i>Assistant Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. String theory</p>
-          <p>2. Holography</p>
-          <p>3. Conformal field theory</p>
-          <p>4. General relativity</p>
-          <p><strong>Email:</strong> mritunjay@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="https://sites.google.com/view/mritunjay314/home?authuser=0" target="_blank">Read more</a>
-      </div>
-
-
-      <div class="faculty-card" id="prof-bivas-dutta">
-        <img src="prof-images/prof-bivas-dutta.jpg" alt="Dr. Bivas Dutta" />
-        <div class="faculty-name">Dr. Bivas Dutta</div>
-        <div class="faculty-info">
-          <p><i>Assistant Professor</i></p>
-          <p><strong>Research Interests: </strong></p>
-          <p>1. Quantum heat transport and thermodynamics;</p>
-          <p>2. Nano-electronic quantum devices: Quantum-Dots;</p>
-          <p>3. Superconducting tunnel junctions local thermometry and heating;</p>
-          <p>4. Quantum Hall thermal transport; Non-abelian Majorana edge modes; Quasiparticle interferometer;</p>
-          <p><strong>Email:</strong> bivas@iiti.ac.in</p>
-        </div>
-        <a class="read-more" href="" target="_blank">Read more</a>
-      </div>
-
+    <div class="search-wrapper">
+      <input type="text" id="facultySearch" placeholder="Search Faculty..." />
     </div>
+
+    <div class="faculty-grid" id="faculty-grid"></div>
+
   </div>
+  <script>
+    fetch('faculty.csv') // change to 'files/faculty.csv' if inside files/
+      .then(response => {
+        if (!response.ok) throw new Error("CSV file not found or can't be loaded.");
+        return response.text();
+      })
+      .then(csvText => {
+        Papa.parse(csvText, {
+          header: true,
+          skipEmptyLines: true,
+          complete: function (results) {
+            const facultyData = results.data;
+            const grid = document.getElementById('faculty-grid');
+            grid.innerHTML = '';
+
+            facultyData.forEach(person => {
+              const card = document.createElement('div');
+              card.className = 'faculty-card';
+              card.innerHTML = `
+              <img src="prof-images/${person.ImageFile}" alt="${person.Name}" />
+              <div class="faculty-name">${person.Name}</div>
+              <div class="faculty-info">
+                <p><i>${person.Position}</i></p>
+                <p><strong>Research Interests:</strong></p>
+                ${person.ResearchInterests?.split(';').map((r, i) => `<p>${i + 1}. ${r.trim()}</p>`).join('') || ''}
+
+                ${person.Experiments ? `<p><strong>Experiments:</strong> ${person.Experiments}</p>` : ''}
+                <p><strong>Email:</strong> ${person.Email}</p>
+              </div>
+              ${person.ReadMoreURL ? `<a class="read-more" href="${person.ReadMoreURL}" target="_blank">Read more</a>` : ''}
+            `;
+              grid.appendChild(card);
+            });
+          }
+        });
+      })
+      .catch(error => {
+        console.error("Failed to load CSV:", error);
+        document.getElementById('faculty-grid').innerHTML = "<p style='color:red;'>Failed to load faculty data.</p>";
+      });
+  </script>
+
+
   <div id="footer-placeholder"></div>
 
-    <script>
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer-placeholder").innerHTML = data;
-            });
-    </script>
+  <script>
+    document.getElementById('facultySearch').addEventListener('input', function () {
+      const filter = this.value.toLowerCase();
+      const cards = document.querySelectorAll('.faculty-card');
+
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(filter) ? 'block' : 'none';
+      });
+    });
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
   <script src="script.js"></script>
 </body>
 

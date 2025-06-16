@@ -236,7 +236,7 @@ async function renderEvents() {
   cardsContainer.innerHTML = '<div class="loading">Loading events...</div>';
   try {
     const { events } = await fetchEvents();
-    cardsContainer.innerHTML = '';
+    cardsContainer.innerHTML = '';    
     events.forEach(event => {
       const card = document.createElement("div");
       card.className = "card";
@@ -245,8 +245,6 @@ async function renderEvents() {
         <h3>${event.title}</h3>
         <p><strong>Date:</strong> ${event.date}</p>
         <p><strong>Location:</strong> ${event.location}</p>
-        <p><strong>Category:</strong> <span class="category">${event.category}</span></p>
-        <p><strong>Price:</strong> ${event.price}</p>
         <p>${event.description}</p>
       `;
       cardsContainer.appendChild(card);
